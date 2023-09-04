@@ -1,0 +1,173 @@
+CRITICAL - 2023-09-04 13:22:08 --> Undefined variable: title
+in APPPATH\Views\layouts\main.php on line 12.
+ 1 APPPATH\Views\layouts\main.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php', 12, [])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/auth/login', [], true)
+ 6 APPPATH\Controllers\Auth.php(20): view('pages/auth/login')
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->login()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+ERROR - 2023-09-04 13:35:33 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\project\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\laragon\www\project\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('localhost', 'root', '', 'project', 3306, '', 0)
+#1 C:\laragon\www\project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\laragon\www\project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\laragon\www\project\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#4 C:\laragon\www\project\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#5 C:\laragon\www\project\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#6 C:\laragon\www\project\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#7 C:\laragon\www\project\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\laragon\www\project\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\laragon\www\project\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\laragon\www\project\spark(102): CodeIgniter\CLI\Console->run()
+#11 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it.
+ in C:\laragon\www\project\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\laragon\www\project\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\laragon\www\project\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\laragon\www\project\system\Database\BaseConnection.php(1409): CodeIgniter\Database\BaseConnection->query('SHOW TABLES FRO...')
+#3 C:\laragon\www\project\system\Database\BaseConnection.php(1428): CodeIgniter\Database\BaseConnection->listTables()
+#4 C:\laragon\www\project\system\Database\MigrationRunner.php(768): CodeIgniter\Database\BaseConnection->tableExists('migrations')
+#5 C:\laragon\www\project\system\Database\MigrationRunner.php(168): CodeIgniter\Database\MigrationRunner->ensureTable()
+#6 C:\laragon\www\project\system\Commands\Database\Migrate.php(84): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#7 C:\laragon\www\project\system\CLI\Commands.php(65): CodeIgniter\Commands\Database\Migrate->run(Array)
+#8 C:\laragon\www\project\system\CLI\Console.php(37): CodeIgniter\CLI\Commands->run('migrate', Array)
+#9 C:\laragon\www\project\spark(102): CodeIgniter\CLI\Console->run()
+#10 {main}
+CRITICAL - 2023-09-04 14:11:23 --> "min_len gth" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_len gth')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('name', 'name', 'SDSDSD', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Auth.php(34): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+CRITICAL - 2023-09-04 14:12:09 --> "min_len gth" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_len gth')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('name', 'name', 'SDSDSD', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Auth.php(34): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+CRITICAL - 2023-09-04 14:12:57 --> "min_len gth" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_len gth')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('name', 'name', 'SDSDSD', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Auth.php(34): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+CRITICAL - 2023-09-04 14:13:14 --> "min_len gth" is not a valid rule.
+in SYSTEMPATH\Validation\Validation.php on line 317.
+ 1 SYSTEMPATH\Validation\Validation.php(317): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('min_len gth')
+ 2 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('name', 'name', 'SDSDSD', [...], [...])
+ 3 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Auth.php(34): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 6 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 7 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+ERROR - 2023-09-04 14:14:11 --> mysqli_sql_exception: Unknown column 'user_email' in 'where clause' in C:\laragon\www\project\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\laragon\www\project\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 C:\laragon\www\project\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 C:\laragon\www\project\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 C:\laragon\www\project\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 C:\laragon\www\project\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\laragon\www\project\system\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('bima23@gmail.co...', 'user_email', Array, NULL, 'email')
+#6 C:\laragon\www\project\system\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'bima23@gmail.co...', Array, Array)
+#7 C:\laragon\www\project\system\Controller.php(150): CodeIgniter\Validation\Validation->run()
+#8 C:\laragon\www\project\app\Controllers\Auth.php(34): CodeIgniter\Controller->validate(Array)
+#9 C:\laragon\www\project\system\CodeIgniter.php(915): App\Controllers\Auth->register()
+#10 C:\laragon\www\project\system\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+#11 C:\laragon\www\project\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\laragon\www\project\public\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 C:\laragon\www\project\system\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\...')
+#14 {main}
+CRITICAL - 2023-09-04 14:14:12 --> Unknown column 'user_email' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `user_email` = :user_email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(309): CodeIgniter\Validation\StrictRules\Rules->is_unique('bima23@gmail.com', 'user_email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(195): CodeIgniter\Validation\Validation->processRules('email', 'email', 'bima23@gmail.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(150): CodeIgniter\Validation\Validation->run()
+ 6 APPPATH\Controllers\Auth.php(34): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+INFO - 2023-09-04 14:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:54:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:55:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:56:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 14:58:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-09-04 15:02:07 --> Undefined variable: title
+in APPPATH\Views\layouts\main.php on line 12.
+ 1 APPPATH\Views\layouts\main.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/auth/register', [], true)
+ 6 APPPATH\Controllers\Auth.php(46): view('pages/auth/register', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+CRITICAL - 2023-09-04 15:02:28 --> Undefined variable: title
+in APPPATH\Views\layouts\main.php on line 12.
+ 1 APPPATH\Views\layouts\main.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/auth/register', [], true)
+ 6 APPPATH\Controllers\Auth.php(46): view('pages/auth/register', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+CRITICAL - 2023-09-04 15:03:31 --> Undefined variable: title
+in APPPATH\Views\layouts\main.php on line 12.
+ 1 APPPATH\Views\layouts\main.php(12): CodeIgniter\Debug\Exceptions->errorHandler(8, 'Undefined variable: title', 'C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php', 12, [...])
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\laragon\\www\\project\\app\\Views\\layouts\\main.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(242): CodeIgniter\View\View->render('layouts/main', [], true)
+ 5 SYSTEMPATH\Common.php(1178): CodeIgniter\View\View->render('pages/auth/register', [], true)
+ 6 APPPATH\Controllers\Auth.php(46): view('pages/auth/register', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(915): App\Controllers\Auth->register()
+ 8 SYSTEMPATH\CodeIgniter.php(492): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Auth))
+ 9 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\laragon\\www\\project\\public\\index.php')
+INFO - 2023-09-04 15:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 15:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 15:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 15:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-09-04 15:16:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
